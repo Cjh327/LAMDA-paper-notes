@@ -8,7 +8,7 @@ Roughly speaking, earlier approaches to multi-label learning attempt to **divide
 
 #### The MIML FrameWork
 
-learning task:  $f: 2^{X}\rightarrow 2^{Y}$
+learning task:  $f: 2^{X}\rightarrow 2^{Y}$ 
 
 data set:	  $\{(X_{1},Y_{1}), (X_{2},Y_{2}), ..., (X_{m},Y_{m})\}$ where $X_{i}\in X$ is a set of instances $\{x_{i1}, x_{i2}, ..., x_{i,n_{i}}\}, x_{ij}\in X$, and $Y_{i}\in Y$ is a set of labels $\{y_{i1}, y_{i2}, ..., y_{i,l_{i}}\}, y_{ij}\in Y$
 
@@ -18,13 +18,13 @@ data set:	  $\{(X_{1},Y_{1}), (X_{2},Y_{2}), ..., (X_{m},Y_{m})\}$ where $X_{i}\
 
 ##### Solution A: Using multi-instance learning as the bridge
 
-learning task: $f_{MIL}: 2^{X}\times Y \rightarrow \{-1,+1\}$
+learning task: $f_{MIL}: 2^{X}\times Y \rightarrow \{-1,+1\}$   
 
 The proper labels for a new example $X^{*}$ can be determined according to $Y^{*} = \{y|sign[f_{MIL}(X^{*}, y)] = +1\}$ 
 
 ##### Solution B: Using multi-label learning as the bridge
 
-learning task: $f_{MLL}: Z \rightarrow 2^{Y}$
+learning task: $f_{MLL}: Z \rightarrow 2^{Y}$ 
 
 For any $z_{i} \in Z$, $f_{MLL}(z_{i}) = f_{MIML}(X_{i})$ if $z_{i} = \phi(X_{i}), \phi:2^{X} \rightarrow Z $
 
@@ -39,7 +39,7 @@ containing $m \times |Y|$ number of bags.
 
 ##### MIMLSVM (an illustration of Solution B)
 
-The basic assumption of MimlSvm is that the spatial distribution of the bags carries **relevant** information, and information helpful for label discrimination can be discovered by measuring the closeness between each bag and the representative bags identified through clustering. 
+The basic assumption of MimlSvm is that the spatial distribution of the bags carries **relevant** information, and information helpful for label discrimination can be discovered by measuring the closeness between each bag and the representative bags identified through clustering.  
 
 - Step 1: the Xu of each MIML example $(X_{u}, Y_{u}) (u =1, 2, · · · , m)$ is collected and put into a data set $\Gamma$. 
 
@@ -49,9 +49,25 @@ The basic assumption of MimlSvm is that the spatial distribution of the bags car
 
 **Medoids**是[数据集](https://en.wikipedia.org/wiki/Data_set)或具有[数据集](https://en.wikipedia.org/wiki/Data_set)的[集群的](https://en.wikipedia.org/wiki/Cluster_analysis)代表性对象，其与集群中所有对象的平均差异最小。(https://en.wikipedia.org/wiki/Medoid)
 
-Thus, the original MIML examples $(X_{u}, Y_{u}) (u = 1, 2, · · · , m)$ have been transformed into multi-label examples $(z_{u}, Y_{u}) (u = 1, 2, · · · , m) $
+Thus, the original MIML examples $(X_{u}, Y_{u}) (u = 1, 2, · · · , m)$ have been transformed into multi-label examples $(z_{u}, Y_{u}) (u = 1, 2, · · · , m) $ 
 
 - Step 4: from the data set a multi-label learning function $f_{MLL}$ can be learned, which
   can accomplish the desired MIML function because $f_{MIML}(X^{∗}) = f_{MLL}(z^{∗})$. 
 - Step 5: in making predictions, the TCriterion [11] is used.
+
+##### Five criteria used for evaluating the performance of learning with multi-label examples
+
+- hamming loss
+- one-error
+- coverage
+- ranking loss
+- average precision
+
+#### Solving MIML Problems by Regularization
+
+
+
+
+
+
 

@@ -15,4 +15,10 @@
 - **Mining extremely small data sets with application to software reuse**  
   Yuan Jiang, Ming Li and Zhi-Hua Zhou∗, †  
   *National Key Laboratory for Novel Software Technology, Nanjing University,*  
-  *Nanjing 210093, China*  
+  *Nanjing 210093, China*    
+
+- **Feature Learning based Deep Supervised Hashing with Pairwise Labels**  
+  Wu-Jun Li, Sheng Wang and Wang-Cheng Kang   
+  *National Key Laboratory for Novel Software Technology*   
+  *Department of Computer Science and Technology, Nanjing University, China*   
+
