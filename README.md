@@ -35,7 +35,6 @@
   *Jianxin Wu, Member, IEEE, and James M. Rehg, Member, IEEE*
 
 - **Towards Sample Efficient Reinforcement Learning∗**  
-
   *Yang Yu*  
   *National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing 210023, China*  
 
