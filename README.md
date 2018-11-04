@@ -31,3 +31,7 @@
   WANG Wei & ZHOU ZhiHua*  
   *National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing 210046, China*  
 
+- **CENTRIST: A Visual Descriptor for Scene Categorization**   
+  *Jianxin Wu, Member, IEEE, and James M. Rehg, Member, IEEE*
+
+ 
