@@ -1,7 +1,7 @@
 # LAMDA-paper-notes
 #### Paper List
 
-- **Multi-Label Learning**  [link](https://github.com/Cjh327/LAMDA-paper-notes/tree/master/Multi-Label%20Learning)
+- **Multi-Label Learning**  [link](https://github.com/Cjh327/LAMDA-paper-notes/tree/master/Multi-Label%20Learning)  
   Zhi-Hua Zhou and Min-Ling Zhang   
   *Nanjing University, Nanjing, China*   
   *Southeast University, Nanjing, China*    
