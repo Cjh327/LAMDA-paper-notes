@@ -41,7 +41,7 @@
 - **Online game props recommendation with real assessments**  [link](https://github.com/Cjh327/LAMDA-paper-notes/tree/master/Online%20Game%20Props%20Recommendation%20with%20Real%20Assessments)   
   *De-Chuan Zhan· Jun Tang · Zhi-Hua Zhou*
 
-- Stochastic Optimization for Kernel PCA∗[link]()   
+- **Stochastic Optimization for Kernel PCA∗**[link](https://github.com/Cjh327/LAMDA-paper-notes/tree/master/Stochastic%20Optimization%20for%20Kernel%20PCA)   
   *Lijun Zhang and Tianbao Yang and Jinfeng Yi and Rong Jin and Zhi-Hua Zhou*  
 
  
