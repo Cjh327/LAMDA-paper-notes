@@ -33,7 +33,7 @@ Optimization problem:
 
 $\min \limits_{B}  J_{1}$ = $-$ log $p(S|B)$ = $-\Sigma_{s_{i,j}\in S}$ log $p(s_{ij}|B)$   
 
-The above optimization problem can make the Hamming distance between two similar points as small as possible, and simultaneously make the Hamming distance between two dissimilar points as large as possible.  
+The above optimization problem can **make the Hamming distance between two similar points as small as possible**, and simultaneously make the Hamming distance between two dissimilar points as large as possible.  
 
 However, the problem is discrete and hard to solve. By relaxing $\{\boldsymbol{b}_{i}\}$ from discrete to continuous, we reformulate the problem as the following equivalent one:  
 
@@ -71,9 +71,8 @@ $+\eta \Sigma^{n}_{i=1}||\boldsymbol{b}_{i}-(\boldsymbol{W}^{T}\phi(\boldsymbol{
 
 #### Learning
 
-minibatch-based strategy  
-
-In each iteration we sample a minibatch of points from the whole training set, and then perform learning based on these sampled points.  
+minibatch-based strategy    
+​	In each iteration we sample a minibatch of points from the whole training set, and then perform learning based on these sampled points.  
 ​	We optimize one parameter with other parameters fixed.  
 ​	The $\boldsymbol{b}_{i}$ can be directly optimized as follows:  
 ​	$\boldsymbol{b}_{i} = sgn(\boldsymbol{u}_{i}) = sgn(\boldsymbol{W}^{T} \phi(\boldsymbol{x}_{i}; \theta) + \boldsymbol{v})$
@@ -100,7 +99,13 @@ Learning algorithm for DPSH.
 - Compute $\boldsymbol{u}_{i} = \boldsymbol{W}^{T} \phi(\boldsymbol{x}_{i}; θ) + \boldsymbol{v}$;
 - Compute the binary code of $\boldsymbol{x}_{i}$ with $\boldsymbol{b}_{i} = sgn(\boldsymbol{u}_{i})$.  
 - Compute derivatives for point $\boldsymbol{x}_{i}$ 
-- Update the parameters $\boldsymbol{W}$; $\boldsymbol{v}$;  $\theta$  by utilizing back propagation;
+- Update the parameters $\boldsymbol{W}$; $\boldsymbol{v}$;  $\theta$  by **utilizing back propagation**;
 
 **UNTIL** a fixed number of iterations  
 
+#### Summary
+
+- use a 7-layer CNN for feature learning
+- a hash function to map the learned result in step one to hash codes
+- compute loss funtion
+- utilize back propagation to optimize parameters
