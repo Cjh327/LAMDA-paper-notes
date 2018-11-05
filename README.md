@@ -38,6 +38,6 @@
   *Yang Yu*  
   *National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing 210023, China*  
 
-- **Online game props recommendation with real assessments**   
+- **Online game props recommendation with real assessments**  [link](https://github.com/Cjh327/LAMDA-paper-notes/tree/master/Online%20Game%20Props%20Recommendation%20with%20Real%20Assessments)   
   *De-Chuan Zhan· Jun Tang · Zhi-Hua Zhou*
 
