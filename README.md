@@ -38,3 +38,6 @@
   *Yang Yu*  
   *National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing 210023, China*  
 
+- **Online game props recommendation with real assessments**   
+  *De-Chuan Zhan· Jun Tang · Zhi-Hua Zhou*
+
