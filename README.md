@@ -44,4 +44,9 @@
 - **Stochastic Optimization for Kernel PCA∗**  [link](https://github.com/Cjh327/LAMDA-paper-notes/tree/master/Stochastic%20Optimization%20for%20Kernel%20PCA)   
   *Lijun Zhang and Tianbao Yang and Jinfeng Yi and Rong Jin and Zhi-Hua Zhou*  
 
- 
+- **Semi-Supervised Document Retrieval**   [link]() 
+  *Ming Li, Hang Li, Zhi-Hua Zhou*  
+  *National Key Laboratory for Novel Software Technology*  
+  *Nanjing University, Nanjing 210093, China * 
+  *Microsoft Research Asia, 49 Zhichun Road, Beijing 100080, China*  
+
