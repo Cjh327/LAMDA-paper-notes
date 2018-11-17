@@ -6,8 +6,7 @@ Yuan Jiang, Ming Li and Zhi-Hua Zhou∗, †
 
 #### Introduction
 
-In general, if a data set cannot fully cover the whole variable space, then the data set is referred as
-*a small data set*. 
+In general, if a data set cannot fully cover the whole variable space, then the data set is referred as *a small data set*. 
 
 
 
