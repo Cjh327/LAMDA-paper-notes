@@ -53,6 +53,6 @@ Recommend Typora for markdown reading
   *Nanjing University, Nanjing 210093, China * 
   *Microsoft Research Asia, 49 Zhichun Road, Beijing 100080, China*  
 
-- **Semi-Supervised Multi-Modal Learning with Incomplete Modalities**  [link]()  
+- **Semi-Supervised Multi-Modal Learning with Incomplete Modalities**  [link](https://github.com/Cjh327/LAMDA-paper-notes/tree/master/Semi-Supervised%20Multi-Modal%20Learning%20with%20Incomplete%20Modalities)  
   Yang Yang, De-Chuan Zhan, Xiang-Rong Sheng, Yuan Jiang  
   *National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing 210023, China*  
