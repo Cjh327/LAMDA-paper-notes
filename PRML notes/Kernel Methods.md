@@ -57,13 +57,13 @@ two views (equal result):
 
    care $w$ 
 
-   $$\begin{cases}f(x)=\phi^T(x)w\\y=f(x)+\epsilon\quad \epsilon\sim \cal{N}(0,\sigma^2)\end{cases} $$ 
+   $$\begin{cases}f(x)=\phi^T(x)w\\y=f(x)+\epsilon\quad \epsilon\sim {\cal{N}}(0,\sigma^2)\end{cases} $$ 
 
    Bayessian Linear Regression + Kernel trick 
 
    **Bayesian Method:** 
 
-   Given prior: $w\sim\cal{N}(0,\Sigma_p)$
+   Given prior: $w\sim{\cal{N}}(0,\Sigma_p)$
 
    $$\because f(x)=\phi^T(x)w\\ \therefore E[f(x)]=E[\phi^T(x)w]=\phi^T(x)E[w]=0$$
 
@@ -81,6 +81,34 @@ two views (equal result):
 
    care $f(x)$ 
 
-   $f(x)$ is a random variable(r.v.) and $f(x)\sim GP(m(x),k(x,x'))$ ( $f(x)$ is a Gaussian Process).
+   $f(x)$ is a random variable(r.v.) and $f(x)\sim GP(m(x),k(x,x'))$ ( $\{f(x)\}$ is a Gaussian Process).
+
+   Definition:
+
+   $$\{f(x)\}_{x\in\Bbb{R}}\sim GP(m(x),K(x,x'))$$
+
+   $$m(x)=E[f(x)]$$ 
+
+   $$K(x,x')=E[(f(x)-m(x))(f(x')-m(x'))^T]$$ 
+
+   **Regression:** 
+
+   Data: $\{(x_i,y_i)\}_{i=1}^N$
+
+   $$X=(x_1,\cdots, x_N)^T\quad N\times p$$ 
+
+   $$Y=(y_1,\cdots,y_N)^T\quad N\times 1$$ 
+
+   Suppose $f(X)\sim {\cal{N}} (\mu(X),K(X,X))$
+
+   $$Y=f(X)+\epsilon$$  
+
+   Prediction:  Given $X^*=(x_1^*,\cdots,x_M^*)$ , $Y^*=f(X^*)+\epsilon$ 
+
+   $$\begin{pmatrix}Y\\f(X^*) \end{pmatrix}\sim{\cal{N}}(\begin{pmatrix}\mu(X)\\\mu(X^*) \end{pmatrix},\begin{pmatrix}K(X,X)+\sigma^2I\quad k(X,X^*)\\K(X^*,X)\quad K(X^*,X^*) \end{pmatrix})$$
+
+   object:  $P(f(X^*)|Y,X,X^*)$ (已知联合高维分布，求条件概率)
+
+   使用公式可直接求出 
 
 Guassian Process Regression is the extension of Bayesian Linear Regression with kernel trick.
