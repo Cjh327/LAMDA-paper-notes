@@ -31,3 +31,56 @@ Gram Matrix $K = [k(x_i,x_j)]$
 
 高斯核  $k(\boldsymbol{x_i},\boldsymbol{x_j})=\exp(-\frac{||\boldsymbol{x_i}-\boldsymbol{x_j}||^2}{2\sigma^2})$
 
+
+
+#### Gaussian Process Regression:
+
+##### Gaussian Process
+
+高斯过程是定义在连续域上的无限多个高维随机变量所组成的随机过程
+
+**Definition:** 
+
+$\{\xi_t\}_{t\in T}$ where $T: $ continuous time/space.
+
+If $\forall n \in N^+, t_1,\cdots,t_n(\mbox{index})\rightarrow \xi_1,\xi_2,\cdots,\xi_n(\mbox{r.v.})$ , 
+
+let $\xi_{1:n}=(\xi_1,\xi_2,\cdots, \xi_n)^T$ 
+
+If $\xi_{1:n}\sim\cal{N}(\mu_{1:n},\Sigma_{1:n})$ , then $\{\xi_t\}_{t\in T}$ is a Gaussian Process, $\xi_t\sim GP(m(t),K(t,s))$ 
+
+
+
+two views (equal result): 
+
+1. **weight-space view** 
+
+   care $w$ 
+
+   $$\begin{cases}f(x)=\phi^T(x)w\\y=f(x)+\epsilon\quad \epsilon\sim \cal{N}(0,\sigma^2)\end{cases} $$ 
+
+   Bayessian Linear Regression + Kernel trick 
+
+   **Bayesian Method:** 
+
+   Given prior: $w\sim\cal{N}(0,\Sigma_p)$
+
+   $$\because f(x)=\phi^T(x)w\\ \therefore E[f(x)]=E[\phi^T(x)w]=\phi^T(x)E[w]=0$$
+
+   $$\begin{align}\forall x,x'\in \Bbb{R}^p, cov(f(x),f(x'))&=E[(f(x)-E[f(x')])(f(x')-E[f(x)])]\\&=E[f(x)f(x')]\\&=E[\phi(x)w\cdot\phi(x')^Tw]\\&=E[\phi(x)w\cdot w^T\phi(x')]\end{align}$$  
+
+   $$(\because \phi(x')^Tw \mbox{ is a one-dim real number }\therefore  \phi(x')^Tw=w^T\phi(x'))$$ 
+
+   $$\begin{align}cov(f(x),f(x'))&=\phi(x)^T E[ww^T]\phi(x')\\&=\phi(x)^T \Sigma_p\phi(x')\\&=k(x,x')\end{align}$$ 
+
+   which is similar to the definition of GP
+
+   $\{f(x)\}$ can be seen as a GP
+
+2. **function-space view** 
+
+   care $f(x)$ 
+
+   $f(x)$ is a random variable(r.v.) and $f(x)\sim GP(m(x),k(x,x'))$ ( $f(x)$ is a Gaussian Process).
+
+Guassian Process Regression is the extension of Bayesian Linear Regression with kernel trick.
