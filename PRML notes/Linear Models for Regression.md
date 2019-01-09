@@ -18,7 +18,7 @@ $$\hat{w}=\arg\min\limits L(w)$$
 
 $$\frac{\partial L(w)}{\partial w}=2X^TXw-2X^TY=0$$ 
 
-$$\therefore w=(X^TX)^{-1}X^TY$$   ( $(X^TX)^{-1}X^T$ 称为伪逆) 
+$$\therefore \hat{w}=(X^TX)^{-1}X^TY$$   ( $(X^TX)^{-1}X^T$ 称为伪逆) 
 
 **几何意义 ** 
 
@@ -28,4 +28,19 @@ $$f(w)=w^T x=x^T \beta$$
 
 $$X^T(Y-X\beta)=0$$ 
 
-$$\therefore \beta = (X^TX)^{-1}X^TY​$$ 
+$$\therefore \beta = (X^TX)^{-1}X^TY$$ 
+
+**概率视角** 
+
+$$y=f(w)+\epsilon = w^Tx+\epsilon\quad \epsilon\sim {\cal{N}}(0,\sigma^2)$$ 
+
+$$y|x;w\sim {\cal{N}}(w^Tx,\sigma^2)$$
+
+MLE (极大似然估计):
+
+$$\begin{align}L(w)&=\log P(Y|X;w)\\&=\log\prod\limits_{i=1}^{N}p(y_i|x_i;w)\\&=\sum\limits_{i=1}\limits^{N}(\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{(y_i-w^Tx_i)^2}{2\sigma^2})\end{align}$$ 
+
+$$\begin{align}\therefore \hat{w}&=\arg\max\limits_w L(w)\\&=\arg\max\limits_w\sum\limits_{i=1}\limits^{N} -\frac{(y_i-w^Tx_i)^2}{2\sigma^2}\\&=\arg\min\limits_w\sum\limits_{i=1}\limits^{N}(y_i-w^Tx)^2\end{align}$$
+
+**LSE** $\boldsymbol{\Leftrightarrow}$ **MLE and suppose that noise is Gaussian Distribution** 
+
